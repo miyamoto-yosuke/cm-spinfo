@@ -1,0 +1,68 @@
+-- MySQL dump 10.13  Distrib 5.7.23, for Linux (x86_64)
+--
+-- Host: localhost    Database: ccwebdb
+-- ------------------------------------------------------
+-- Server version	5.7.23
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `cm_aclg`
+--
+
+DROP TABLE IF EXISTS `cm_aclg`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `cm_aclg` (
+  `al_idactv` int(11) NOT NULL AUTO_INCREMENT COMMENT 'ID',
+  `al_nmactv` varchar(40) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'ã‚¢ã‚¯ãƒ†ã‚£ãƒ“ãƒ†ã‚£åŒºåˆ†å',
+  `al_noactv` int(11) NOT NULL COMMENT 'ã‚¢ã‚¯ãƒ†ã‚£ãƒ“ãƒ†ã‚£ç•ªå·',
+  `al_dtactv` date NOT NULL COMMENT 'ã‚¢ã‚¯ãƒ†ã‚£ãƒ“ãƒ†ã‚£æ—¥ä»˜',
+  `al_cdsqsk` varchar(8) COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT 'è«‹æ±‚å…ˆèª­è€…ç•ªå·',
+  `al_nmsqsk` varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'è«‹æ±‚å…ˆé¡§å®¢å',
+  `al_nmsqbu` varchar(200) COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT 'è«‹æ±‚å…ˆéƒ¨ç½²å',
+  `al_nmsqtn` varchar(200) COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT 'è«‹æ±‚å…ˆæ‹…å½“å',
+  `al_txactv` varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'ã‚¢ã‚¯ãƒ†ã‚£ãƒ“ãƒ†ã‚£å†…å®¹',
+  `al_susury` int(11) DEFAULT NULL COMMENT 'æ•°é‡',
+  `al_kgtnka` int(11) DEFAULT NULL COMMENT 'å˜ä¾¡',
+  `al_kggoke` int(11) DEFAULT NULL COMMENT 'åˆè¨ˆé‡‘é¡',
+  `al_txbiko` varchar(500) COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT 'å‚™è€ƒ',
+  `al_cdcstm` varchar(8) COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT 'èª­è€…ç•ªå·',
+  `al_nmcstm` varchar(200) COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT 'é¡§å®¢å',
+  `al_nmtnbu` varchar(200) COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT 'éƒ¨ç½²å',
+  `al_nmtnto` varchar(200) COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT 'æ‹…å½“è€…å',
+  PRIMARY KEY (`al_idactv`),
+  KEY `cm_aclg_I01` (`al_nmactv`,`al_cdsqsk`),
+  KEY `cm_aclg_I02` (`al_dtactv`,`al_nmactv`,`al_cdsqsk`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='ã‚¢ã‚¯ãƒ†ã‚£ãƒ“ãƒ†ã‚£ãƒ­ã‚°';
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `cm_aclg`
+--
+
+LOCK TABLES `cm_aclg` WRITE;
+/*!40000 ALTER TABLE `cm_aclg` DISABLE KEYS */;
+INSERT INTO `cm_aclg` VALUES (1,'物販',9277,'1975-01-14','20983432','後藤　直','JALの奇跡','2','26171',24389,19800,20930347,'20930347','20930347','20930347','20930347','Chilean Peso'),(2,'物販',9277,'1975-01-14','20983432','後藤　直','JALの奇跡','2','26171',24389,19800,20930347,'20930347','20930347','20930347','20930347','Chilean Peso'),(3,'物販',9277,'1975-01-14','20983432','後藤　直','JALの奇跡','2','26171',24389,19800,20930347,'20930347','20930347','20930347','20930347','Chilean Peso');
+/*!40000 ALTER TABLE `cm_aclg` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2019-03-09  9:22:33

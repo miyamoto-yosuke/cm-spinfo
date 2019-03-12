@@ -1,0 +1,29 @@
+version: '3.3'
+
+services:
+  db:
+    image: mysql:5.7
+    container_name: cm-spi-mysql
+    environment:
+      MYSQL_DATABASE: ccwebdb
+      MYSQL_USER: docker
+      MYSQL_PASSWORD: docker
+      MYSQL_ROOT_PASSWORD: root
+      TZ: 'Asia/Tokyo'
+    command: mysqld --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
+    volumes:
+    - ./db/my.cnf:/etc/mysql/conf.d/my.cnf
+    - ./db/sql:/docker-entrypoint-initdb.d
+    - mysql-data:/var/lib/mysql
+    - ./share:/share:delegated
+    ports:
+    - 3306:3306
+
+volumes:
+  mysql-data:
+
+networks:
+  default:
+    external:
+      name: chichi-network
+
