@@ -9,5 +9,6 @@ RUN apk add --no-cache mysql-client
 
 ENV PATH /app/node_modules/.bin:$PATH
 RUN npm install
+RUN npm run build
 
 EXPOSE 3001
