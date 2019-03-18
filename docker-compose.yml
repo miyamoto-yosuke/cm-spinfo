@@ -25,7 +25,7 @@ services:
       - NODE_ENV=production
     container_name: cm-spi-node
     ports:
-      - "8338:3000"
+      - "8338:3001"
     tty: true
     depends_on:
       - db

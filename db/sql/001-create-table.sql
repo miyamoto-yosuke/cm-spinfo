@@ -8,9 +8,10 @@ create table cm_mdmm (
   , md_txmdmm varchar(400) not null comment '顧客メモ'
   , md_fganch int(1) comment 'アンカーフラグ'
   , md_clmdmm varchar(10) comment '窓口メモカラー'
-  , md_ccdate date not null comment '更新日'
   , md_ccadip varchar(15) comment '更新IPアドレス'
   , md_ccmodu varchar(20) comment '更新モジュール'
+  , createdAt date not null comment '作成日'
+  , updatedAt date not null comment '更新日'
   , constraint cm_mdmm_pkc primary key (md_idmdmm)
 ) comment 'お客様窓口メモ' ;
 
@@ -40,6 +41,8 @@ create table cm_aclg (
   , al_nmcstm varchar(200) comment '顧客名'
   , al_nmtnbu varchar(200) comment '部署名'
   , al_nmtnto varchar(200) comment '担当者名'
+  , createdAt date not null comment '作成日'
+  , updatedAt date not null comment '更新日'
   , constraint cm_aclg_pkc primary key (al_idactv)
 ) comment 'アクティビティログ' ;
 

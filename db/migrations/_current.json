@@ -1,0 +1,176 @@
+{
+    "tables": {
+        "cm_aclg": {
+            "tableName": "cm_aclg",
+            "schema": {
+                "al_idactv": {
+                    "allowNull": false,
+                    "primaryKey": true,
+                    "autoIncrement": true,
+                    "field": "al_idactv",
+                    "seqType": "Sequelize.INTEGER(11)"
+                },
+                "al_nmactv": {
+                    "allowNull": false,
+                    "field": "al_nmactv",
+                    "seqType": "Sequelize.STRING(40)"
+                },
+                "al_noactv": {
+                    "allowNull": false,
+                    "field": "al_noactv",
+                    "seqType": "Sequelize.INTEGER(11)"
+                },
+                "al_dtactv": {
+                    "allowNull": false,
+                    "field": "al_dtactv",
+                    "seqType": "Sequelize.DATEONLY"
+                },
+                "al_cdsqsk": {
+                    "allowNull": true,
+                    "field": "al_cdsqsk",
+                    "seqType": "Sequelize.STRING(8)"
+                },
+                "al_nmsqsk": {
+                    "allowNull": false,
+                    "field": "al_nmsqsk",
+                    "seqType": "Sequelize.STRING(200)"
+                },
+                "al_nmsqbu": {
+                    "allowNull": true,
+                    "field": "al_nmsqbu",
+                    "seqType": "Sequelize.STRING(200)"
+                },
+                "al_nmsqtn": {
+                    "allowNull": true,
+                    "field": "al_nmsqtn",
+                    "seqType": "Sequelize.STRING(200)"
+                },
+                "al_txactv": {
+                    "allowNull": false,
+                    "field": "al_txactv",
+                    "seqType": "Sequelize.STRING(200)"
+                },
+                "al_susury": {
+                    "allowNull": true,
+                    "field": "al_susury",
+                    "seqType": "Sequelize.INTEGER(11)"
+                },
+                "al_kgtnka": {
+                    "allowNull": true,
+                    "field": "al_kgtnka",
+                    "seqType": "Sequelize.INTEGER(11)"
+                },
+                "al_kggoke": {
+                    "allowNull": true,
+                    "field": "al_kggoke",
+                    "seqType": "Sequelize.INTEGER(11)"
+                },
+                "al_txbiko": {
+                    "allowNull": true,
+                    "field": "al_txbiko",
+                    "seqType": "Sequelize.STRING(500)"
+                },
+                "al_cdcstm": {
+                    "allowNull": true,
+                    "field": "al_cdcstm",
+                    "seqType": "Sequelize.STRING(8)"
+                },
+                "al_nmcstm": {
+                    "allowNull": true,
+                    "field": "al_nmcstm",
+                    "seqType": "Sequelize.STRING(200)"
+                },
+                "al_nmtnbu": {
+                    "allowNull": true,
+                    "field": "al_nmtnbu",
+                    "seqType": "Sequelize.STRING(200)"
+                },
+                "al_nmtnto": {
+                    "allowNull": true,
+                    "field": "al_nmtnto",
+                    "seqType": "Sequelize.STRING(200)"
+                },
+                "createdAt": {
+                    "allowNull": false,
+                    "field": "createdAt",
+                    "seqType": "Sequelize.DATE"
+                },
+                "updatedAt": {
+                    "allowNull": false,
+                    "field": "updatedAt",
+                    "seqType": "Sequelize.DATE"
+                }
+            },
+            "indexes": []
+        },
+        "cm_mdmm": {
+            "tableName": "cm_mdmm",
+            "schema": {
+                "md_idmdmm": {
+                    "allowNull": false,
+                    "primaryKey": true,
+                    "autoIncrement": true,
+                    "field": "md_idmdmm",
+                    "seqType": "Sequelize.INTEGER(11)"
+                },
+                "md_cdcstm": {
+                    "allowNull": false,
+                    "field": "md_cdcstm",
+                    "seqType": "Sequelize.STRING(8)"
+                },
+                "md_nommrb": {
+                    "allowNull": false,
+                    "field": "md_nommrb",
+                    "seqType": "Sequelize.STRING(2)"
+                },
+                "md_nmmmbr": {
+                    "allowNull": true,
+                    "field": "md_nmmmbr",
+                    "seqType": "Sequelize.STRING(100)"
+                },
+                "md_txmdmm": {
+                    "allowNull": false,
+                    "field": "md_txmdmm",
+                    "seqType": "Sequelize.STRING(400)"
+                },
+                "md_fganch": {
+                    "allowNull": true,
+                    "field": "md_fganch",
+                    "seqType": "Sequelize.INTEGER(1)"
+                },
+                "md_clmdmm": {
+                    "allowNull": true,
+                    "field": "md_clmdmm",
+                    "seqType": "Sequelize.STRING(10)"
+                },
+                "md_ccdate": {
+                    "allowNull": false,
+                    "field": "md_ccdate",
+                    "seqType": "Sequelize.DATEONLY"
+                },
+                "md_ccadip": {
+                    "allowNull": true,
+                    "field": "md_ccadip",
+                    "seqType": "Sequelize.STRING(15)"
+                },
+                "md_ccmodu": {
+                    "allowNull": true,
+                    "field": "md_ccmodu",
+                    "seqType": "Sequelize.STRING(20)"
+                },
+                "createdAt": {
+                    "allowNull": false,
+                    "field": "createdAt",
+                    "seqType": "Sequelize.DATE"
+                },
+                "updatedAt": {
+                    "allowNull": false,
+                    "field": "updatedAt",
+                    "seqType": "Sequelize.DATE"
+                }
+            },
+            "indexes": []
+        }
+    },
+    "revision": 1
+}
